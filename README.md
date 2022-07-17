@@ -3,6 +3,7 @@
 - 使用技術：
   - Vue 3
   - Vite
+  - TailwindCSS
 
 - 功能：
   - 加減乘除
