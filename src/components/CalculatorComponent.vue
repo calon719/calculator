@@ -66,7 +66,7 @@ export default {
     },
     computeNum() {
       const answer = eval(this.stringArr.join('') + this.numString);
-      this.history = `${this.displayString}=${answer}`;
+      this.history = `${this.displayString}<br>=${answer}`;
       this.numString = answer;
       this.stringArr.splice(0);
       this.showAnswer = true;
@@ -78,11 +78,9 @@ export default {
 <template>
   <div class="rounded-lg p-8 mx-auto bg-zinc-800 w-80 drop-shadow-2xl">
     <div class="rounded-lg bg-zinc-300 px-4 py-2 mb-4">
-      <div class="text-right overflow-hidden relative">
-        <p class="text-sm text-gray-500 mb-6">
-          {{ history }}
-        </p>
-        <p class="whitespace-nowrap absolute bottom-0 right-0">
+      <div class="overflow-hidden relative">
+        <p class="text-sm text-gray-500 mb-6 break-all" v-html="history" />
+        <p class="text-right whitespace-nowrap absolute bottom-0 right-0">
           {{ displayString }}
         </p>
       </div>
