@@ -1,7 +1,12 @@
-# Vue 3 + Vite
+# 簡易計算機
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+- 使用技術：
+  - Vue 3
+  - Vite
 
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+- 功能：
+  - 加減乘除
+  - 數字倒退
+  - 清除全數字
+  - 計算結果
+  - 顯示前一筆計算結果
