@@ -54,7 +54,7 @@ export default {
       this.numString = '0';
     },
     deleteString() {
-      if (this.numString === '' && this.stringArr.length !== 0) {
+      if (this.numString.length === 1 && this.stringArr.length) {
         this.stringArr.splice(-1, 1);
         [this.numString] = this.stringArr.splice(-1, 1);
       } else {
