@@ -54,12 +54,12 @@ export default {
       this.numString = '0';
     },
     deleteString() {
-      if (this.numString.length === 1 && this.stringArr.length) {
+      if (this.numString === '' && this.stringArr.length) {
         this.stringArr.splice(-1, 1);
         [this.numString] = this.stringArr.splice(-1, 1);
       } else {
         this.numString = this.numString.slice(0, -1);
-        if (this.numString.length <= 0) {
+        if (!this.numString.length && !this.stringArr.length) {
           this.numString = '0';
         }
       }
@@ -79,7 +79,10 @@ export default {
   <div class="rounded-lg p-8 mx-auto bg-zinc-800 w-80 drop-shadow-2xl">
     <div class="rounded-lg bg-zinc-300 px-4 py-2 mb-4">
       <div class="overflow-hidden relative">
-        <p class="text-sm text-gray-500 mb-6 break-all" v-html="history" />
+        <p
+          class="text-sm text-gray-500 mb-6 break-all"
+          v-html="history"
+        />
         <p class="text-right whitespace-nowrap absolute bottom-0 right-0">
           {{ displayString }}
         </p>
