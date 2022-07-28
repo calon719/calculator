@@ -4,5 +4,5 @@ import vue from '@vitejs/plugin-vue';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  base: 'https://calon719.github.io/calculator/',
+  base: '/calculator/',
 });
